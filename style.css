@@ -1,0 +1,300 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-family: 'Cabin', sans-serif;
+    padding: 0 90px;
+    font-weight: 900;
+    
+}
+
+.menu{
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    box-shadow: 3px 0 5px rgba(0,0,0,.4);
+    font-family: 'Cabin', sans-serif;
+    color: white;
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    margin-right: 80px;
+}
+
+.menu_items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu_items li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.menu_items li:hover, li.active{
+    background-color: rgba(140, 140, 140, 0.529);
+    transition: .1s;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+
+
+
+/* contenido*/
+
+.header{
+    color: rgb(92, 92, 92);
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.content{
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    
+    
+}
+
+.content hr{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+.projects{
+    max-width: 1200px;
+    display: grid;
+    grid-gap: 10px;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 300px 300px 300px 300px;
+    margin-bottom: 150px;
+    
+}
+
+
+.projects .card{
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(233, 233, 233);
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    text-align: center;
+    
+}
+
+.card .images img{
+    width: 100%;
+    padding: 0;
+}
+
+
+.card .title_projects a{
+    font-family: 'Cabin', sans-serif;
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: black;
+    text-decoration: none;
+
+}
+
+
+.card p{
+
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+.card .button a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    background: rgb(124, 124, 124);
+    padding: 7px;
+}
+
+
+#social_media{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40px 40px;
+    margin-bottom: 30px;
+    color: rgb(92, 92, 92);
+
+    
+}
+
+
+#social_media a{
+    color: gray;
+}
+
+
+footer{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    width: 100%;
+    height: 90px;
+    color: rgb(112, 111, 111);
+    text-align: center;
+    padding: 40px;
+}
+
+
+
+
+
+
+/*resposive*/
+
+
+@media (max-width: 952px){
+    .logo{
+        font-size: 25px;
+        padding: 35px;
+    }
+    .menu_items li a{
+        font-size: 16px;
+    }
+    
+
+}
+
+@media (max-width: 850px){
+    .menu{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu_items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: black;
+        top: -100vh;
+        text-align: center;
+        transition: all .2s;
+        flex-direction: column;
+    }
+    .menu_items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu_items li:hover{
+        background: none;
+    }
+    .menu_items li a{
+        font-size: 20px;
+        color: blanchedalmond;
+        font-weight: bold;
+    }
+    .menu_items li a{
+        color:rgb(191, 191, 191);
+    }
+
+    .projects{
+        display: block;
+       
+        
+    }
+
+    .projects .card{
+        background: rgb(237, 237, 237);
+        align-items: center;
+        
+    }
+    
+}
+
+
+
+@media (max-width: 1154px){
+    
+    .projects{
+        grid-template-columns: 400px 400px ;
+       
+        
+    }
+
+    .projects .card{
+        background: rgb(237, 237, 237);
+        align-items: center;
+        
+    }
+
+}
+
+
+@media (max-width: 1200px){
+    
+    .projects{
+        grid-template-columns: 350px 350px 350px ;
+       
+        
+    }
+
+    .projects .card{
+        background: rgb(237, 237, 237);
+        align-items: center;
+        
+    }
+
+}
+
+
+
+@media screen and (max-width: 858px) and (orientation: landscape){
+    .menu_items li{
+        margin: 5px 0 0 0;
+    }
+    .menu_items{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+    
+
+}
